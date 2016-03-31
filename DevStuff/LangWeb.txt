@@ -1,0 +1,98 @@
+Index
+logo img
+lang name
+History
+Features
+Usages
+Why
+Examples
+Resources
+
+==================
+History
+influences
+styles
+what was used
+used from
+
+==================
+Features
+syntax
+paradigms
+dynamic
+reasons why
+decisions made
+
+==================
+Usages
+Eg: systems programming, apps development, web development etc
+
+==================
+Why
+why invented, details
+
+========
+Examples
+hello world
+linked list
+
+sorting - bubble sort, binary search, folder search
+small utility
+
+build system/support/IDE
+
+link to Github page
+
+=================
+Resources
+docs
+tutorials
+manuals
+books
+specs
+std lib
+feedback
+compilers
+toolchains
+supported archs
+
+Side by side comparison with other related langs( Objective-C/Java/C#? )
+memory mgmt
+-gc vs manual
+-i/o 
+-call/return semantics -ref/val
+-oop supported-native support
+-multithreading model/async support
+-where can we run the code?
+-binding model
+-scope handling/rules
+-polymorphism/other fancy featues
+-support for remoting/distributed computing
+-framework support
+-
+
+
+Work distribution
+=============
+
+Tyler
+=====
+All of Web stuff
+Index
+History
+Resources
+Examples - Both
+
+Senthil
+=======
+Features
+Usages
+Comparison
+Why
+Examples - Both
+
+Plan
+====
+Get done by website by 3rd April
+Get done by Examples/Initial Prep by 8th April
+Get together to review/sync-up/practice

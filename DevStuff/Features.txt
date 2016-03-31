@@ -1,0 +1,6 @@
+"Swift is a powerful and intuitive programming language for iOS, OS X, tvOS, and watchOS. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and apps run lightning-fast." - Apple
+
+1. Evolution of Objective-C
+2. Compiled Language and based on LLVM
+3. Interoperation with Objective-C and other frameworks
+4. 
