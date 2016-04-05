@@ -96,3 +96,13 @@ Plan
 Get done by website by 3rd April
 Get done by Examples/Initial Prep by 8th April
 Get together to review/sync-up/practice
+
+
+Examples
+========
+Recursion
+Sorting/algo
+Example to show Inheritance/Polymorphism
+Tuples/Multile returns
+
+UI
