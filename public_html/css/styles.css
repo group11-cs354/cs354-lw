@@ -1,0 +1,45 @@
+body {
+    padding-top: 50px;
+}
+
+.navbar-inverse .navbar-nav>.active>a {
+	background-color: rgb(252,88,53);
+}
+
+.mainContainer {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#pageHeaderContainer {
+    background-color: rgb(252,88,53);
+    height: 70px;
+}
+
+#pageHeader {
+    color: white;
+    font-size: 40px;
+    padding-left: 30px;
+    line-height: 70px;
+    vertical-align: middle;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#footerDiv {
+    float: right;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+#footerSpan {
+    color: gray;
+}
+
+#footerSpan:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(252,88,53);
+}
