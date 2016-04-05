@@ -1,21 +1,26 @@
+/* Add padding to the top of the page body to compensate for the fixed navbar */
 body {
     padding-top: 50px;
 }
 
+/* Change the background color of an active tab on the navbar */
 .navbar-inverse .navbar-nav>.active>a {
 	background-color: rgb(252,88,53);
 }
 
+/* Add padding to each side every page */
 .mainContainer {
 	padding-left: 30px;
 	padding-right: 30px;
 }
 
+/* Set the height and background color for the header container on each page */
 #pageHeaderContainer {
     background-color: rgb(252,88,53);
     height: 70px;
 }
 
+/* Font styling for the header text on each page */
 #pageHeader {
     color: white;
     font-size: 40px;
@@ -24,20 +29,24 @@ body {
     vertical-align: middle;
 }
 
+/* Remove underline from active links on hover */
 a:hover {
     text-decoration: none;
 }
 
+/* Place the container for the 'Change History' link to the bottom right corner of the footer */
 #footerDiv {
     float: right;
     padding-right: 10px;
     padding-bottom: 10px;
 }
 
+/* Change the color of the text for the 'Change History' link when its not being hovered over */
 #footerSpan {
     color: gray;
 }
 
+/* When hovering over the 'Change History' link in the footer, change the cursor style, text color, and background color of the link */ 
 #footerSpan:hover {
     cursor: pointer;
     color: white;
