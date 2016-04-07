@@ -49,6 +49,10 @@ a:hover {
 /* When hovering over the 'Change History' link in the footer, change the cursor style, text color, and background color of the link */ 
 #footerSpan:hover {
     cursor: pointer;
-    color: white;
-    background-color: rgb(252,88,53);
+    color: rgb(252,88,53);
+}
+
+/* Change color of alternating stripes on comparison table */
+.table-striped>tbody>tr:nth-child(odd)>td {
+    background-color: rgba(252,88,53,.2);
 }

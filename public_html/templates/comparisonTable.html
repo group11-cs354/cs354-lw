@@ -1,0 +1,116 @@
+<div class="container-fluid">
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr>
+                <td>Fact/Feature</td>
+                <td>Objective-C</td>
+                <td>Swift</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Language Design</td>
+                <td>
+                    Built on C/Superset of C. Lots of ugly syntax with "@" to denote objects or functions. Centralized around Apple platforms.
+                </td>
+                <td>
+                    Modern language with many features from other languages. Designed to be platform agnostic, which makes it possible to run
+                    on non-Apple platforms.
+                </td>
+            </tr>
+            <tr>
+                <td>Code Maintainability</td>
+                <td>
+                    Separation of code using header files, similar to C. No namespaces.
+                </td>
+                <td>
+                    Drops separation based on header files. Better segregation of modules using namespace concept, with class keyword.
+                </td>
+            </tr>
+            <tr>
+                <td>Safety</td>
+                <td>Inappropriate null pointer handling. Using null pointers results in No-Op.</td>
+                <td>
+                    Can use Optional Type to trigger Runtime error when accessing null pointer.
+                </td>
+            </tr>
+            <tr>
+                <td>Memory Management</td>
+                <td>
+                    Automatic Memory Management (using ARC) is not available across all frameworks. Example: programmer has to manually free
+                    all allocations when using the Graphics API.
+                </td>
+                <td>
+                    ARC support is integrated and available across all frameworkss. This also enhances performance without having to run Garbage
+                    Collector.
+                </td>
+            </tr>
+            <tr>
+                <td>Code Structure for Class Declarations</td>
+                <td>
+                    Requires separate interace and implementation declaration for each class. Results in code bloating and maintenance problems.
+                </td>
+                <td>
+                    Doesn't require separate interface from implementation; makes code simpler and easiser to read.
+                </td>
+            </tr>
+            <tr>
+                <td>Data Structures and Return Types</td>
+                <td>
+                    No support for Dictionaries or multiple returns. Enumeration similar to C, elements are integers.
+                </td>
+                <td>
+                    Dictionary, Tuple (and return Tuple) support built in. Adds improved version of "enum" that can handle strings, chars, ints,
+                    floats.
+                </td>
+            </tr>
+            <tr>
+                <td>Programming Paradigms</td>
+                <td>
+                    Modelled on Imperative Paradigm
+                </td>
+                <td>
+                    Lots of new featrues added to support functional programming (such as first-class functions).
+                </td>
+            </tr>
+            <tr>
+                <td>Automatic Type Inference</td>
+                <td>
+                    Every variable should have type explicitly declared (ex: NSString str = @"string")
+                </td>
+                <td>
+                    Supports type inferences. Example: var myStr = "hello"
+                </td>
+            </tr>
+            <tr>
+                <td>Control Flow constructs</td>
+                <td>
+                    Control flow constructs are similar to C.
+                </td>
+                <td>
+                    Provides control flow constructs, which simplifies code and reduces errors. Example: break statement no longer needed (but
+                    can be explicitly added if necessary). Support for a new guard construct to create if then else statements.
+                    Switch-case statement improved to support more patterns, interval matches, tuples, and casts.
+                </td>
+            </tr>
+            <tr>
+                <td>Developer Productivity</td>
+                <td>
+                    Similar to C/C++; Every time code is changed, recompilation is required to execute or test.
+                </td>
+                <td>
+                    Built in Playground feature to see results of code changes in real time.
+                </td>
+            </tr>
+            <tr>
+                <td>Variable Names</td>
+                <td>
+                    Need to be in ASCII, similar to C.
+                </td>
+                <td>
+                    Files can be written in Unicode with Unicode characters as name variables. Improves internationalization.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
