@@ -101,7 +101,7 @@ Get together to review/sync-up/practice
 Examples
 ========
 Recursion
-Sorting/algo
+Sorting/Algo
 Example to show Inheritance/Polymorphism
 Tuples/Multile returns
 
