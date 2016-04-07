@@ -9,22 +9,17 @@
 </head>
 
 <body ng-app="swift" ng-controller="swiftCtrl" ng-cloak>
-
-    <navbar page="index"></navbar>
-    <div id="pageHeaderContainer"><span id="pageHeader">Swift</span></div>
+    <navbar page="comparison"></navbar>
+    <div id="pageHeaderContainer"><span id="pageHeader">Comparison</span></div>
     <div class="mainContainer">
-        <img src="img/swift.png" alt="Swift Logo" width="40%" height="40%" style="margin-left: auto; margin-right:auto; margin-top: 20px; margin-bottom:20px;">
-        <p style="float:left">
-            <br /> Swift is an open source programming language being developed primarily by Apple. It packs a lot of really cool
-            features and is starting to gain traction from developers working not only in an Apple-centric environment, but
-            also on other platforms such as Linux.
+        <h3>Objective-C vs Swift</h3>
+        <p>Below is a table showing some of the differences between Objective-C and Swift.
+            This is intended to show some of the reasons as to why we think Swift is the 
+            successor to Objective-C.
         </p>
+        <comparison-table></comparison-table>
     </div>
-
 </body>
-<footer>
-    <site-footer></site-footer>
-</footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>

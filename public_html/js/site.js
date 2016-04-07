@@ -26,3 +26,10 @@ app.directive("siteFooter", function() {
        templateUrl: "templates/footer.html"
    } 
 });
+
+app.directive("comparisonTable", function() {
+   return {
+       restrict: 'E',
+       templateUrl: "templates/comparisonTable.html"
+   } 
+});
