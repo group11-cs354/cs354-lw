@@ -8,6 +8,13 @@ body {
 	background-color: rgb(252,88,53);
 }
 
+#mainLogo {
+    width:40%;
+    height:40%;
+    margin: 20px auto;
+    display:block;
+}
+
 /* Add padding to each side every page */
 .mainContainer {
 	padding-left: 30px;
