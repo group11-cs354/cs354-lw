@@ -9,10 +9,9 @@ body {
 }
 
 #mainLogo {
-    width:40%;
-    height:40%;
+    max-width:30%;
+    height:auto;
     margin: 20px auto;
-    display:block;
 }
 
 /* Add padding to each side every page */
