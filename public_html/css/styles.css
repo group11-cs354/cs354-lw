@@ -8,6 +8,7 @@ body {
 	background-color: rgb(252,88,53);
 }
 
+/* Correctly format the logo on the index page */
 #mainLogo {
     max-width:30%;
     height:auto;
