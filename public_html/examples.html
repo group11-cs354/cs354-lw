@@ -4,9 +4,8 @@
     <title>Swift</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -14,22 +13,75 @@
     <navbar page="examples"></navbar>
     <div id="pageHeaderContainer"><span id="pageHeader">Examples</span></div>
     <div class="mainContainer">
+        <p style="margin-top:10px">
+            Below are some examples of code written in Swift. Note that for the Makefile, it is assumed that each example is in a file named 'test' and that each example is being called from within the file
+            (in other words, there are no parameters to pass into the Makefile).    
+        </p>
+        
+        <button class="btn btn-sm btn-default" ng-click="toggleMake()">{{viewMake ? 'Hide Makefile' : 'View Makefile'}}</button>
+        <div id="makefile" class="makeContainer">
+            <code>all:
+                <br /><span class="fixWhiteSpace">    swiftc test.swift</span>
+                <br />run: all
+                <br /><span class="fixWhiteSpace">    ./test</span>
+                <br />clean:
+                <br /><span class="fixWhiteSpace">    rm -rf test</span>
+            </code>
+        </div>
+        
         <h3>Hello World</h3>
         <code>
             print("Hello World!")
         </code>
+        <br />
+        <span class="output">---> Hello World!</span>
+
+        <h3>Recursive Factorial</h3>
+        <code class="code">
+            func factorial(num: Int) -> Int { 
+            <br />
+            <span class="fixWhiteSpace">    return (num <=1 ) ? 1 : num * factorial(num-1)</span> 
+            <br />}
+        </code>
+        <br />
+        <span class="output">factorial(6)<br />
+            ---> 720
+        </span>
+
+        <h3>Reverse an Array</h3>
+        <code class="code">
+            <!-- &lt; = <, &gt; = > -->
+            func reverseArray&lt;T&gt;(arr: [T]) -> [T] {
+            <br /><span class="fixWhiteSpace">    var temp = arr</span>
+            <br /><span class="fixWhiteSpace">    for (index,item) in arr.enumerate() {</span>
+            <br /><span class="fixWhiteSpace">        temp[(arr.count-1)-index] = item</span>
+            <br /><span class="fixWhiteSpace">    }</span>
+            <br /><span class="fixWhiteSpace">    return temp</span>
+            <br />}
+        </code>
+        <br />
+        <span class="output">var list: [String] = ["item1","item2","item3","item4","item5"]
+            <br /><br />
+            reverseArray(list)
+            <br />---> ["item5","item4","item3","item2","item1"]
+        </span>
     </div>
-    
+
 </body>
 <footer>
     <site-footer></site-footer>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
-        crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+crossorigin="anonymous">
+
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 <script src="js/site.js"></script>
+<script>
+    $(document).ready(function() {
+       $("#makefile").hide(); 
+    });
+</script>
 
 </html>

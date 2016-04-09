@@ -1,3 +1,8 @@
+/* Set font size for devices with a width of 320px or less */
+@media (max-width: 320px) {
+    body{font-size: 12px;}
+}
+
 /* Add padding to the top of the page body to compensate for the fixed navbar */
 body {
     padding-top: 50px;
@@ -30,10 +35,15 @@ body {
 /* Font styling for the header text on each page */
 #pageHeader {
     color: white;
-    font-size: 40px;
+    font-size: 2.5em;
     padding-left: 30px;
     line-height: 70px;
     vertical-align: middle;
+}
+
+/* Make link text orange instead of blue */
+a {
+    color: rgb(252,88,53);
 }
 
 /* Remove underline from active links on hover */
@@ -59,7 +69,44 @@ a:hover {
     color: rgb(252,88,53);
 }
 
+/* Make the table have a fixed layout */
+#comparisonTable {
+    table-layout: fixed;
+}
+
+/* Force the contents of table cells to wrap contents by breaking on any character (if necessary) */
+#comparisonTable td {
+    word-wrap: break-word;
+    vertical-align: middle;
+}
+
 /* Change color of alternating stripes on comparison table */
 .table-striped>tbody>tr:nth-child(odd)>td {
     background-color: rgba(252,88,53,.2);
+}
+
+/* Used to keep white space on examples page */
+.fixWhiteSpace {
+    white-space: pre-wrap;
+}
+
+/* Used to create a block around a code snippet on examples page */
+.code {
+    display:inline-block;
+}
+
+/* Format the span displaying the output of an example block of code */
+.output {
+    display:inline-block;
+    background-color: lightyellow;
+    padding: 2px 4px;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+/* Style the container for the Makefile on the Examples page */
+.makeContainer {
+    width: 250px;
+    background-color: rgba(252,88,53,.1);
+    border: 1px solid rgb(252,88,53);
+    border-radius: 4px;
 }
