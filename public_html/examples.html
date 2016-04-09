@@ -20,7 +20,7 @@
         
         <button class="btn btn-sm btn-default" ng-click="toggleMake()">{{viewMake ? 'Hide Makefile' : 'View Makefile'}}</button>
         <div id="makefile" class="makeContainer">
-            <code>all:
+            <code class="code">all:
                 <br /><span class="fixWhiteSpace">    swiftc test.swift</span>
                 <br />run: all
                 <br /><span class="fixWhiteSpace">    ./test</span>
@@ -60,10 +60,10 @@
             <br />}
         </code>
         <br />
-        <span class="output">var list: [String] = ["item1","item2","item3","item4","item5"]
+        <span class="output">var list: [String] = ["item1", "item2", "item3", "item4", "item5"]
             <br /><br />
             reverseArray(list)
-            <br />---> ["item5","item4","item3","item2","item1"]
+            <br />---> ["item5", "item4", "item3", "item2", "item1"]
         </span>
     </div>
 
