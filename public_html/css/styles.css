@@ -86,7 +86,7 @@ a:hover {
 }
 
 /* Used to keep white space on examples page */
-.fixWhiteSpace {
+.fixWS {
     white-space: pre-wrap;
 }
 

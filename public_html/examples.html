@@ -14,18 +14,18 @@
     <div id="pageHeaderContainer"><span id="pageHeader">Examples</span></div>
     <div class="mainContainer">
         <p style="margin-top:10px">
-            Below are some examples of code written in Swift. Note that for the Makefile, it is assumed that each example is in a file named 'test' and that each example is being called from within the file
+            Below are some examples of code written in Swift. Note that for the Makefile, it is assumed that each example is in a file named 'test.swift' and that each example is being called from within the file
             (in other words, there are no parameters to pass into the Makefile).    
         </p>
         
         <button class="btn btn-sm btn-default" ng-click="toggleMake()">{{viewMake ? 'Hide Makefile' : 'View Makefile'}}</button>
         <div id="makefile" class="makeContainer">
             <code class="code">all:
-                <br /><span class="fixWhiteSpace">    swiftc test.swift</span>
+                <br /><span class="fixWS">    swiftc test.swift</span>
                 <br />run: all
-                <br /><span class="fixWhiteSpace">    ./test</span>
+                <br /><span class="fixWS">    ./test</span>
                 <br />clean:
-                <br /><span class="fixWhiteSpace">    rm -rf test</span>
+                <br /><span class="fixWS">    rm -rf test</span>
             </code>
         </div>
         
@@ -40,7 +40,7 @@
         <code class="code">
             func factorial(num: Int) -> Int { 
             <br />
-            <span class="fixWhiteSpace">    return (num <=1 ) ? 1 : num * factorial(num-1)</span> 
+            <span class="fixWS">    return (num <=1 ) ? 1 : num * factorial(num-1)</span> 
             <br />}
         </code>
         <br />
@@ -52,11 +52,11 @@
         <code class="code">
             <!-- &lt; = <, &gt; = > -->
             func reverseArray&lt;T&gt;(arr: [T]) -> [T] {
-            <br /><span class="fixWhiteSpace">    var temp = arr</span>
-            <br /><span class="fixWhiteSpace">    for (index,item) in arr.enumerate() {</span>
-            <br /><span class="fixWhiteSpace">        temp[(arr.count-1)-index] = item</span>
-            <br /><span class="fixWhiteSpace">    }</span>
-            <br /><span class="fixWhiteSpace">    return temp</span>
+            <br /><span class="fixWS">    var temp = arr</span>
+            <br /><span class="fixWS">    for (index,item) in arr.enumerate() {</span>
+            <br /><span class="fixWS">        temp[(arr.count-1)-index] = item</span>
+            <br /><span class="fixWS">    }</span>
+            <br /><span class="fixWS">    return temp</span>
             <br />}
         </code>
         <br />
