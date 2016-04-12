@@ -1,8 +1,14 @@
 var app = angular.module("swift", []);
 
 app.controller("swiftCtrl", function($scope) {
+   $scope.viewMake = false;
    $scope.goToHistory = function() {
        location.href = "changehistory.html";
+   }
+   
+   $scope.toggleMake = function() {
+       $scope.viewMake = !$scope.viewMake;
+       angular.element("#makefile").slideToggle();
    }
 });
 

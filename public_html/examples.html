@@ -4,7 +4,8 @@
     <title>Swift</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -12,22 +13,103 @@
     <navbar page="examples"></navbar>
     <div id="pageHeaderContainer"><span id="pageHeader">Examples</span></div>
     <div class="mainContainer">
-        <h3>Hello World</h3>
+        <p style="margin-top:10px">
+            Below are some examples of code written in Swift. Note that for the Makefile, it is assumed that each example is in a file named 'test.swift' and that each example is being called from within the file
+            (in other words, there are no parameters to pass into the Makefile). Actual files and Makefiles can be found in the example directory on our 
+            <a href="https://github.com/group11-cs354/cs354-lw/tree/master/examples" target="_blank">GitHub page</a>.   
+        </p>
+        
+        <button class="btn btn-sm btn-default" ng-click="toggleMake()">{{viewMake ? 'Hide Makefile' : 'View Makefile'}}</button>
+        <div id="makefile" class="makeContainer">
+            <code class="code">all:
+                <br /><span class="fixWS">    swiftc test.swift</span>
+                <br />run: all
+                <br /><span class="fixWS">    ./test</span>
+                <br />clean:
+                <br /><span class="fixWS">    rm -rf test</span>
+            </code>
+        </div>
+        
+        <h3>Hello World <a href="https://swiftlang.ng.bluemix.net/#/repl" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
         <code>
             print("Hello World!")
         </code>
+        <br />
+        <span class="output">---> Hello World!</span>
+
+        <h3>Recursive Factorial <a href="http://swiftlang.ng.bluemix.net/#/repl/0bb9e3bf7d77c919975edfc3c6bb78df12c89a2c9deda894e9523a686f881b42" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
+        <code class="code">
+            func factorial(num: Int) -> Int { 
+            <br />
+            <span class="fixWS">    return (num <= 1 ) ? 1 : num * factorial(num-1)</span> 
+            <br />}
+        </code>
+        <br />
+        <span class="output">factorial(6)<br />
+            ---> 720
+        </span>
+
+        <h3>Reverse an Array <a href="http://swiftlang.ng.bluemix.net/#/repl/e4d4a32bbb0958c792f247e8439cba5bdcd04309d8a39ed30619054c83b47a9d" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
+        <code class="code">
+            <!-- &lt; = <, &gt; = > -->
+            func reverseArray&lt;T&gt;(arr: [T]) -> [T] {
+            <br /><span class="fixWS">    var temp = arr</span>
+            <br /><span class="fixWS">    for (index,item) in arr.enumerate() {</span>
+            <br /><span class="fixWS">        temp[(arr.count-1)-index] = item</span>
+            <br /><span class="fixWS">    }</span>
+            <br /><span class="fixWS">    return temp</span>
+            <br />}
+        </code>
+        <br />
+        <span class="output">var list: [String] = ["item1", "item2", "item3", "item4", "item5"]
+            <br /><br />
+            reverseArray(list)
+            <br />---> ["item5", "item4", "item3", "item2", "item1"]
+        </span>
+        
+        <h3>Writing to Other Languages <a href="http://swiftlang.ng.bluemix.net/#/repl/c5c373b2e981afbfefc658881542ca9b919b706ce43ae3f54bee08c00c8a6983" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
+        <code class="code">
+            import Glibc
+            <br /><br />system("touch hello.c")
+            <br />var stream = fopen("hello.c", "r+")
+            <br />var program = "#include &lt;stdio.h&gt;\n\n" +
+            <br />"int main(void) {\n" +
+            <br />"  printf(\"Hello from C!\");\n" +
+            <br />"  return 0;\n" +
+            <br />"}"
+            <br />fwrite(program, 1, program.characters.count, stream)
+            <br />fclose(stream)
+            <br />system("cat hello.c")
+            <br />system("clang hello.c")
+            <br />system("./a.out")
+        </code>
+        <br />
+        <span class="output">--->
+            <br />#include &lt;stdio.h&gt;
+            <br />
+            <br />int main(void) {
+            <br /><span class="fixWS">  printf("Hello from C!");</span>
+            <br /><span class="fixWS">  return 0;</span>
+            <br />}
+            <br />Hello from C!
+        </span>
     </div>
-    
+
 </body>
 <footer>
     <site-footer></site-footer>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+crossorigin="anonymous">
+
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 <script src="js/site.js"></script>
 <script>
-
+    $(document).ready(function() {
+       $("#makefile").hide(); 
+    });
 </script>
 
 </html>
