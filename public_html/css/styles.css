@@ -1,6 +1,7 @@
 /* Set font size for devices with a width of 320px or less */
 @media (max-width: 320px) {
     body{font-size: 12px;}
+    .hideSm{display:none;}
 }
 
 /* Add padding to the top of the page body to compensate for the fixed navbar */

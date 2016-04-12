@@ -15,7 +15,8 @@
     <div class="mainContainer">
         <p style="margin-top:10px">
             Below are some examples of code written in Swift. Note that for the Makefile, it is assumed that each example is in a file named 'test.swift' and that each example is being called from within the file
-            (in other words, there are no parameters to pass into the Makefile).    
+            (in other words, there are no parameters to pass into the Makefile). Actual files and Makefiles can be found in the example directory on our 
+            <a href="https://github.com/group11-cs354/cs354-lw/tree/master/examples" target="_blank">GitHub page</a>.   
         </p>
         
         <button class="btn btn-sm btn-default" ng-click="toggleMake()">{{viewMake ? 'Hide Makefile' : 'View Makefile'}}</button>
@@ -29,18 +30,18 @@
             </code>
         </div>
         
-        <h3>Hello World</h3>
+        <h3>Hello World <a href="https://swiftlang.ng.bluemix.net/#/repl" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
         <code>
             print("Hello World!")
         </code>
         <br />
         <span class="output">---> Hello World!</span>
 
-        <h3>Recursive Factorial</h3>
+        <h3>Recursive Factorial <a href="http://swiftlang.ng.bluemix.net/#/repl/0bb9e3bf7d77c919975edfc3c6bb78df12c89a2c9deda894e9523a686f881b42" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
         <code class="code">
             func factorial(num: Int) -> Int { 
             <br />
-            <span class="fixWS">    return (num <=1 ) ? 1 : num * factorial(num-1)</span> 
+            <span class="fixWS">    return (num <= 1 ) ? 1 : num * factorial(num-1)</span> 
             <br />}
         </code>
         <br />
@@ -48,7 +49,7 @@
             ---> 720
         </span>
 
-        <h3>Reverse an Array</h3>
+        <h3>Reverse an Array <a href="http://swiftlang.ng.bluemix.net/#/repl/e4d4a32bbb0958c792f247e8439cba5bdcd04309d8a39ed30619054c83b47a9d" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
         <code class="code">
             <!-- &lt; = <, &gt; = > -->
             func reverseArray&lt;T&gt;(arr: [T]) -> [T] {
@@ -64,6 +65,33 @@
             <br /><br />
             reverseArray(list)
             <br />---> ["item5", "item4", "item3", "item2", "item1"]
+        </span>
+        
+        <h3>Writing to Other Languages <a href="http://swiftlang.ng.bluemix.net/#/repl/c5c373b2e981afbfefc658881542ca9b919b706ce43ae3f54bee08c00c8a6983" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
+        <code class="code">
+            import Glibc
+            <br /><br />system("touch hello.c")
+            <br />var stream = fopen("hello.c", "r+")
+            <br />var program = "#include &lt;stdio.h&gt;\n\n" +
+            <br />"int main(void) {\n" +
+            <br />"  printf(\"Hello from C!\");\n" +
+            <br />"  return 0;\n" +
+            <br />"}"
+            <br />fwrite(program, 1, program.characters.count, stream)
+            <br />fclose(stream)
+            <br />system("cat hello.c")
+            <br />system("clang hello.c")
+            <br />system("./a.out")
+        </code>
+        <br />
+        <span class="output">--->
+            <br />#include &lt;stdio.h&gt;
+            <br />
+            <br />int main(void) {
+            <br /><span class="fixWS">  printf("Hello from C!");</span>
+            <br /><span class="fixWS">  return 0;</span>
+            <br />}
+            <br />Hello from C!
         </span>
     </div>
 
