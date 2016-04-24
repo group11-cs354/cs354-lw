@@ -20,6 +20,7 @@
         </p>
         
         <button class="btn btn-sm btn-default" ng-click="toggleMake()">{{viewMake ? 'Hide Makefile' : 'View Makefile'}}</button>
+        
         <div id="makefile" class="makeContainer">
             <code class="code">all:
                 <br /><span class="fixWS">    swiftc test.swift</span>
@@ -29,13 +30,16 @@
                 <br /><span class="fixWS">    rm -rf test</span>
             </code>
         </div>
-        
+       
         <h3>Hello World <a href="https://swiftlang.ng.bluemix.net/#/repl" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
-        <code>
-            print("Hello World!")
-        </code>
-        <br />
-        <span class="output">---> Hello World!</span>
+        <div id="helloworld">
+            <code>
+                print("Hello World!")
+            </code>
+            <br />
+            <span class="output">---> Hello World!</span>
+        </div> 
+        
 
         <h3>Recursive Factorial <a href="http://swiftlang.ng.bluemix.net/#/repl/0bb9e3bf7d77c919975edfc3c6bb78df12c89a2c9deda894e9523a686f881b42" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
         <code class="code">
@@ -49,12 +53,12 @@
             ---> 720
         </span>
 
-        <h3>Reverse an Array <a href="http://swiftlang.ng.bluemix.net/#/repl/e4d4a32bbb0958c792f247e8439cba5bdcd04309d8a39ed30619054c83b47a9d" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
+        <h3>Reverse an Array <a href="http://swiftlang.ng.bluemix.net/#/repl/847923ad71c5d432f56047b56149f413c07d4741243cc65a7325aaafa463fd2e" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
         <code class="code">
             <!-- &lt; = <, &gt; = > -->
             func reverseArray&lt;T&gt;(arr: [T]) -> [T] {
             <br /><span class="fixWS">    var temp = arr</span>
-            <br /><span class="fixWS">    for (index,item) in arr.enumerate() {</span>
+            <br /><span class="fixWS">    for (index,item) in arr.enumerated() {</span>
             <br /><span class="fixWS">        temp[(arr.count-1)-index] = item</span>
             <br /><span class="fixWS">    }</span>
             <br /><span class="fixWS">    return temp</span>
@@ -92,6 +96,23 @@
             <br /><span class="fixWS">  return 0;</span>
             <br />}
             <br />Hello from C!
+        </span>
+        
+        <h3 id="atm">Simple ATM <a href="http://swiftlang.ng.bluemix.net/#/repl/dd9fa97182948c69a44f0c8128d3196bc45eb340116bb71ce6eb390edc0fdc45" target="_blank" class="hideSm btn btn-sm btn-default">View</a></h3>
+        <code class="code">
+            func 🏧🏧(num: Int) -> (balBefore: Int, balAfter: Int) {
+                <br /><span class="fixWS">  let bal = 10000</span>
+                <br /><span class="fixWS">  let remainder = bal-num</span>
+                <br /><span class="fixWS">  return (bal, remainder)</span>
+            <br />}
+        </code>
+        <br />
+        <span class="output">
+            let 💰 = 🏧🏧(100)
+            <br />print("Balance before withdrawal: ", 💰.balBefore, "\nBalance after withdrawal: ", 💰.balAfter)
+            <br /><br />---> 
+            <br />Balance before withdrawal: 10000
+            <br />Balance after withdrawal:  9900
         </span>
     </div>
 
